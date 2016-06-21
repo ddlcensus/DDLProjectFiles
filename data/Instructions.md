@@ -1,4 +1,4 @@
-# Title
+# Instructions to create DDL_census_data.csv
 
 
 Census Block Group centroids were obtained for the Greater Washington area (attached). 
@@ -15,7 +15,7 @@ https://mapzen.com/data/metro-extracts/ and downloaded shapefile for Washington,
 
 5) Merged census block group shapefiles with centroid lat longs calculated for DC, MD, VA, then joined to census data on icome and disability
 
-6) File named xxx, fields described below:
+6) File named DDL_census_data.csv, fields described below:
 
 * ACS_14_5YR Estimate; Median household income in the past 12 months (in 2014 Inflation-adjusted dollars)
 * ACS_14_5_1 Margin of Error; Median household income in the past 12 months (in 2014 Inflation-adjusted dollars)
