@@ -3,15 +3,28 @@
 
 Census Block Group centroids were obtained for the Greater Washington area (attached). 
 
-1) Obtained shapefiles for DC metropolitan area from:
-https://mapzen.com/data/metro-extracts/ and downloaded shapefile for Washington, DC metropolitan area- "dc-baltimore_maryland.imposm-shapefiles.zip"
+1) From openstreetmaps.org > export > Metro extracts, connected to https://mapzen.com/data/metro-extracts/ and downloaded shapefile for DC metropolitan area - I think it was the one called "dc-baltimore_maryland.imposm-shapefiles.zip"
+
+2) Downloaded census block group shapefiles for DC, MD, VA for 2014 using the following link: https://www.census.gov/geo/maps-data/data/cbf/cbf_blkgrp.html 
+ 
+3) Extracted the census block groups for MD and VA that intersected the polygons that defined the Metro DC area in the file downloaded from mapzen.com as descibed above in step 1.
+ 
+4) Calculated the centroid latitude and longitude of these polygons in ArcGIS. This is also be done in QGIS, which is a free product.
+
+5) Downloaded income and disability data for DC and surrounding census block groups from the website http://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml, which was a link from the blog post http://conveyal.com/blog/2015/12/11/census-tools that had been recommended to us by Jeffrey Meisel. Used the "guided search" option to extract information, including
+
+⋅⋅* People > Food Stamps > Disability > B22010, RECEIPT OF FOOD STAMPS/SNAP IN THE PAST 12 MONTHS BY DISABILITY STATUS FOR HOUSEHOLDS: Households; 2010-2014 American Community Survey 5-Year Estimates
+
+6) Merged census block group shapefiles from DC and portions of MD and VA (DC metro area) with centroid latitudes and longitudes calculated (from step 4), then joined to census data on income and disability as extracted in step 5, using the census block group ID to perform the join. These steps were performed using ArcGIS.
+
+
 
 2) Downloaded census block group shapefiles for DC, MD, VA for 20914 using: (https://www.census.gov/geo/maps-data/data/cbf/cbf_blkgrp.html) and extracted the census block groups for MD and VA that intersected the polygons that defined the Washington, DC metro area 
 
 3) Calculated the centroid latitude and longitudes of these polygons in ArcGIS
 
 4) Downloaded income and disability data for DC, VA, and MD at the block group level from: http://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml
-..* Used "guided search" option down the path: People > Food Stamps > Disability > B22010, RECEIPT OF FOOD STAMPS/SNAP IN THE PAST 12 MONTHS BY DISABILITY STATUS FOR HOUSEHOLDS: Households; 2010-2014 American Community Survey 5-Year Estimates
+..* 
 
 5) Merged census block group shapefiles with centroid lat longs calculated for DC, MD, VA, then joined to census data on icome and disability
 
